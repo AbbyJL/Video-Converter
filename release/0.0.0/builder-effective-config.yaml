@@ -1,0 +1,25 @@
+directories:
+  output: release/${version}
+  buildResources: build
+appId: com.smallpig.desktop
+productName: smallpig
+asar: true
+copyright: Copyright © 2022 smallpig
+files:
+  - filter:
+      - dist
+mac:
+  artifactName: ${productName}_${version}.${ext}
+  target:
+    - dmg
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false
+publish:
+  - provider: generic
+    url: http://127.0.0.1:8080
+releaseInfo:
+  releaseNotes: 版本更新的具体内容
+electronVersion: 19.1.0
